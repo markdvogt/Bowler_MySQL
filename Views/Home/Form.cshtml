@@ -36,14 +36,14 @@
             <label for="phone" asp-for="BowlerPhoneNumber">Phone Number</label>
             <input type="text" id="phone" asp-for="BowlerPhoneNumber"><br><br>
 
-            @*<label asp-for="TeamID">Team</label><!--asp-for commands allow connection to my models-->
-        <select asp-for="TeamID">
-            <option value="">Select a Team Name</option>
-            @foreach (Team t in ViewBag.Teams) //make loop
-            {
-                <option value="@t.TeamID">@t.TeamName</option>
-            }
-        </select><br /><br />*@
+            <label asp-for="TeamID">Team</label><!--asp-for commands allow connection to my models-->
+            <select asp-for="TeamID">
+                <option value="">Select a Team Name</option>
+                @foreach (Team t in ViewBag.Teams) //make loop
+                {
+                    <option value="@t.TeamID">@t.TeamName</option>
+                }
+            </select><br /><br />
 
             <div class="buttonHolder">
                 <input value="Submit" type="submit" id="calculate">

@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Delete Bowler";
+}
+
+@model Bowler_MySQL.Models.Bowler
+
+<h2>Are you sure you want to delete the record for @Model.BowlerFirstName </h2>
+
+<form method="post" asp-controller="Home" asp-action="Delete">
+    <button type="submit">Delete</button>
+    <a asp-controller="Home" asp-action="DataTable" class="btn btn-primary">Cancel</a> <!-- If the user cancels the deletion request, it takes them back to the DataTabe page-->
+    <!-- Add the class="btn" to make the link look like a button and btn-primary to make the button bolded -->
+
+    <input type="hidden" asp-for="BowlerID" /> <!-- You need some way to link this form to the models page and Home Controller so you do a hidden field with the FormId -->
+</form>

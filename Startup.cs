@@ -32,7 +32,7 @@ namespace Bowler_MySQL
                 options.UseMySql(Configuration["ConnectionStrings:BowlersDbConnection"]);
             });
 
-            services.AddScoped<IBowlersRepository, EFBowlersRepository>();
+            //services.AddScoped<IBowlersRepository, EFBowlersRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

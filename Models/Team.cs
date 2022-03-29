@@ -12,6 +12,6 @@ namespace Bowler_MySQL.Models
         [Required]
         public int TeamID { get; set; }
         public string TeamName { get; set; }
-        public string CaptainID { get; set; }
+        public int CaptainID { get; set; }
     }
 }

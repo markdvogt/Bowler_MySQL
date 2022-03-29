@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Bowler Form";
+}
+
+@model Bowler_MySQL.Models.Bowler
+
+<!--This is my form page!-->
+<h2>Enter a Bowler</h2>
+<div class="form-center">
+    <form method="post">
+        <fieldset style="border-radius: 10px;">
+
+            <div asp-validation-summary="All"></div> <!--Makes it so validation pops up-->
+
+            <label for="fName" asp-for="BowlerFirstName">First Name</label>
+            <input type="text" id="fName" asp-for="BowlerFirstName"><br><br>
+
+            <label for="MiddleInit" asp-for="BowlerMiddleInit">Middle Initial</label>
+            <input type="text" id="MiddleInit" asp-for="BowlerMiddleInit"><br><br>
+
+            <label for="lName" asp-for="BowlerLastName">Last Name</label>
+            <input type="text" id="lName" asp-for="BowlerLastName"><br><br>
+
+            <label for="address" asp-for="BowlerAddress">Address</label>
+            <input type="text" id="address" asp-for="BowlerAddress"><br><br>
+
+            <label for="city" asp-for="BowlerCity">City</label>
+            <input type="text" id="city" asp-for="BowlerCity"><br><br>
+
+            <label for="state" asp-for="BowlerState">State</label>
+            <input type="text" id="state" asp-for="BowlerState"><br><br>
+
+            <label for="zip" asp-for="BowlerZip">Zip Code</label>
+            <input type="text" id="zip" asp-for="BowlerZip"><br><br>
+
+            <label for="phone" asp-for="BowlerPhoneNumber">Phone Number</label>
+            <input type="text" id="phone" asp-for="BowlerPhoneNumber"><br><br>
+
+            @*<label asp-for="TeamID">Team</label><!--asp-for commands allow connection to my models-->
+        <select asp-for="TeamID">
+            <option value="">Select a Team Name</option>
+            @foreach (Team t in ViewBag.Teams) //make loop
+            {
+                <option value="@t.TeamID">@t.TeamName</option>
+            }
+        </select><br /><br />*@
+
+            <div class="buttonHolder">
+                <input value="Submit" type="submit" id="calculate">
+            </div>
+
+        </fieldset>
+    </form>
+
+</div>

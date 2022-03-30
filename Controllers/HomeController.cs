@@ -45,9 +45,10 @@ namespace Bowler_MySQL.Controllers
         }
 
         [HttpGet]
-        public IActionResult DataTable()
+        public IActionResult DataTable(string bowlerTeam) 
         {
             var bowlerTable = _context.Bowlers
+                .Where(x => x.Team.TeamName == bowlerTeam || bowlerTeam == null ) // Only get projects where they match the bowlerTeam selected or if none is selected show all 
                 .Include(x => x.Team) //Inner join on Team model
                 .OrderBy(x => x.BowlerFirstName)
                 .ToList();

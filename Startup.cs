@@ -60,7 +60,14 @@ namespace Bowler_MySQL
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "team",
+                    pattern: "{bowlerTeam}",
+                    defaults: new { Controller = "Home", action = "Index"});
             });
+
+            
         }
     }
 }

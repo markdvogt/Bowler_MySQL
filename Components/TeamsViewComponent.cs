@@ -22,7 +22,7 @@ namespace Bowler_MySQL.Components
         // invoke method 
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedType = RouteData.Values["bookCategory"];
+            ViewBag.SelectedTeam = RouteData.Values["bowlerTeam"];
 
             // get category types 
             var teams = _context.Bowlers

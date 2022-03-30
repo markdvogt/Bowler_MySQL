@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Bowler_MySQL.Views.Shared.Teams
+namespace Bowler_MySQL.Views.Shared.Components.Teams
 {
     public class DefaultModel : PageModel
     {

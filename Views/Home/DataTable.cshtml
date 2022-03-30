@@ -11,7 +11,7 @@
     </div>
 
     <div class="col-9">
-        <h1>Bowlers</h1>
+        <h1>@ViewBag.Header</h1>
 
         <table class="table table-bordered table-striped">
             <thead class="font-weight-bold">
@@ -42,9 +42,9 @@
                     <td>@b.BowlerPhoneNumber</td>
                     <td>@b.Team.TeamName</td>
 
-                    <td><a asp-controller="Home" asp-action="Edit" asp-route-bowlerid="@b.BowlerID">Edit</a></td>
+                    <td><a asp-controller="Home" asp-action="Edit" asp-route-bowlerid="@b.BowlerID" class="btn btn-warning">Edit</a></td>
                     <!-- Now the delete button on each row will be attached to a different FormId -->
-                    <td><a asp-controller="Home" asp-action="Delete" asp-route-bowlerid="@b.BowlerID">Delete</a></td>
+                    <td><a asp-controller="Home" asp-action="Delete" asp-route-bowlerid="@b.BowlerID" class="btn btn-danger">Delete</a></td>
                 </tr>
 
                 }

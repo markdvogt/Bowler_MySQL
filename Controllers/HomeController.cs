@@ -47,6 +47,16 @@ namespace Bowler_MySQL.Controllers
         [HttpGet]
         public IActionResult DataTable(string bowlerTeam) 
         {
+            if (bowlerTeam is null)
+            {
+                ViewBag.Header = "Home";
+            }
+            else
+            {
+                ViewBag.Header = bowlerTeam;
+            }
+                
+
             var bowlerTable = _context.Bowlers
                 .Where(x => x.Team.TeamName == bowlerTeam || bowlerTeam == null ) // Only get projects where they match the bowlerTeam selected or if none is selected show all 
                 .Include(x => x.Team) //Inner join on Team model

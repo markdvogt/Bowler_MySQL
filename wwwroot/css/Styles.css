@@ -1,0 +1,79 @@
+﻿body {
+    background-color: #c8d8e4;
+    font-family: Helvetica, Arial, sans-serif, Courier, monospace
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 18pt;
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+ol {
+    text-align: center;
+    list-style-position: inside;
+}
+
+h3 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+}
+
+.form-center {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.buttonHolder {
+    text-align: center;
+}
+
+fieldset {
+    border: solid 2px black;
+    float: left;
+    background-color: blanchedalmond
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.ex1 {
+    width: 500px;
+    margin: auto;
+}
+
+input {
+    border-radius: 5px;
+}
+
+a {
+    text-align: center;
+    color: black
+}
+
+.target {
+    color: black;
+    text-align: center;
+}
